@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.menu-card {
+    border: 2px solid #333;
+    background-color: #d3d3d3;
+    overflow: hidden;
+}
+
+.menu-header {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    border-left: 2px solid #333;
+    position: relative;
+    float: right;
+    min-width: 150px;
+}
+
+.menu-header.chicken {
+    background-color: #d8a5b5;
+}
+
+.menu-header.beef {
+    background-color: #c25454;
+    color: #ffffff;
+}
+
+.menu-header.sushi {
+    background-color: #d4c990;
+}
+
+.menu-content {
+    clear: both;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.menu-content p {
+    color: #333;
+    font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .menu-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
